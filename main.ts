@@ -253,9 +253,24 @@ function addStuff(object: DayPlan): void {
           }
         }
         const $tableData = $tableRows[index].querySelectorAll('td');
-        console.log($tableData);
+        console.log('length:', $tableData.length);
+
         $tableData[0].textContent = object.time;
         $tableData[1].textContent = object.event;
+        $tableData[2].textContent = object.time;
+        const $actionRow = document.createElement('div');
+        // create dic
+        $actionRow.classList.add('row', 'justify-space-evenly');
+
+        const $editButton = document.createElement('button');
+        const $deleteButton = document.createElement('button');
+        $editButton.textContent = 'EDIT';
+        $deleteButton.textContent = 'DELETE';
+        $actionRow.appendChild($editButton);
+        $actionRow.appendChild($deleteButton);
+
+        $tableData[2].appendChild($actionRow);
+
         $tableRows[index].classList.add('filled');
       }
       break;
