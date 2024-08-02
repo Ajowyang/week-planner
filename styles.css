@@ -1,0 +1,31 @@
+.new-event-button {
+  background-color: #6c757c;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+
+.edit-button {
+  background-color: #116ef9;
+}
+
+.delete-button {
+  background-color: #dc3744;
+}
+
+table {
+  border: 1px solid chartreuse;
+}
+
+th {
+  font-weight: bold;
+}
+
+tr:nth-child(odd) {
+  background-color: #f5f5f5;
+  color: black;
+}
+
+tr:nth-child(even) {
+  background-color: white;
+}
