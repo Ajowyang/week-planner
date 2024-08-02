@@ -20,5 +20,28 @@ $dismissModal.addEventListener('click', function () {
 });
 
 // Code for switching the table based on day of the week
-const $tableDay = document.querySelectorAll('#chooseDay');
-console.log($tableDay);
+const $tableDay = document.querySelector('#chooseDay') as HTMLSelectElement;
+if (!$tableDay) throw new Error('#chooseDay query failed!');
+
+// let value = $tableDay.value;
+
+$tableDay.addEventListener('change', function () {
+  const dayString = $tableDay.options[$tableDay.selectedIndex].text;
+  console.log(dayString);
+  switch (dayString) {
+    case 'monday':
+      break;
+    case 'tuesday':
+      break;
+    case 'wednesday':
+      break;
+    case 'thursday':
+      break;
+    case 'friday':
+      break;
+    case 'saturday':
+      break;
+    case 'sunday':
+      break;
+  }
+});
