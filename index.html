@@ -410,7 +410,7 @@
       <form class="modal-form">
         <div class="column-full">
           <label for="event-time">Time of Event:</label>
-          <select name="event-time" id="event-time">
+          <select name="time" id="event-time">
             <option value="">Choose a Time</option>
             <option value="0000">0000</option>
             <option value="0100">0100</option>
@@ -441,7 +441,7 @@
           <label for="day-of-week-modal" class="margin-top-10">
             Day of Week:</label
           >
-          <select name="day-of-week-modal" id="day-of-week-modal">
+          <select name="day" class="modal-day-select">
             <option value="monday">Monday</option>
             <option value="tuesday">Tuesday</option>
             <option value="wednesday">Wednesday</option>
@@ -457,7 +457,7 @@
           <div class="row">
             <textarea
               class="padding-top-5"
-              name="event-info"
+              name="event"
               id="event-info"
               cols="30"
               rows="15"></textarea>
@@ -466,7 +466,9 @@
             <button type="button" class="dismiss-modal margin-top-10">
               Cancel
             </button>
-            <button class="confirm-button margin-top-10">Confirm</button>
+            <button type="submit" class="confirm-button margin-top-10">
+              Confirm
+            </button>
           </div>
         </div>
       </form>

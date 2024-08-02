@@ -34,15 +34,17 @@ if (!$modalForm) throw new Error('.modal-form query failed!');
 interface FormElements extends HTMLCollection {
   time: HTMLSelectElement;
   day: HTMLSelectElement;
-  eventInfo: HTMLTextAreaElement;
+  event: HTMLTextAreaElement;
 }
 
-$modalForm.addEventListener('submit', function () {
+$modalForm.addEventListener('submit', function (event: Event) {
+  event.preventDefault();
   const $formElements = $modalForm.elements as FormElements;
+  console.log($formElements);
   const dayPlan: DayPlan = {
     time: $formElements.time.value,
     day: $formElements.day.value,
-    event: $formElements.eventInfo.value,
+    event: $formElements.event.value,
   };
 
   console.log(dayPlan);
