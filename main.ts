@@ -132,3 +132,29 @@ $tableDay.addEventListener('change', function () {
 });
 
 // Code to render the the new html lines based off the code.
+// const $trList = document.querySelector('tr-list');
+
+// function renderTR(data: DayPlan): unknown{
+//   const $tdTime = document.createElement('td');
+//   $tdTime.setAttribute('class', 'time-table');
+//   $tdTime.textContent = data.time;
+
+//   const $tdEvent = document.createElement('td');
+//   $tdEvent.setAttribute('class', 'event-table');
+//   $tdEvent.textContent = data.event;
+
+//   const $tdButtonEdit = document.createElement('td');
+//   $tdButtonEdit.setAttribute('class', 'button-edit');
+
+//   const $tdButtonDel = document.createElement('td');
+//   $tdButtonDel.setAttribute('class', 'button-delete');
+
+//   const $buttonEdit = document.createElement('button');
+//   $buttonEdit.setAttribute('class', 'delete');
+//   $buttonEdit.setAttribute('type', 'submit');
+
+//   const $buttonDel = document.createElement('button');
+//   $buttonDel.setAttribute('class', 'delete');
+//   $buttonDel.setAttribute('type', 'submit');
+
+//
