@@ -44,13 +44,41 @@
             <td>test</td>
             <td>test</td>
           </tr>
-          <tr></tr>
-          <tr></tr>
-          <tr></tr>
-          <tr></tr>
-          <tr></tr>
-          <tr></tr>
-          <tr></tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
         </thead>
       </table>
       <div class="row">
@@ -59,5 +87,31 @@
     </div>
 
     <script src="main.js"></script>
+
+    <dialog>
+      <div class="column-full">
+        <label for="event-time">Time of Event:</label>
+        <select name="event-time" id="event-time"></select>
+
+        <label for="day-of-week-modal"> Day of Week:</label>
+        <select name="day-of-week-modal" id="day-of-week-modal">
+          <option value="monday">Monday</option>
+          <option value="tuesday">Tuesday</option>
+          <option value="wednesday">Wednesday</option>
+          <option value="thursday">Thursday</option>
+          <option value="friday">Friday</option>
+          <option value="saturday">Saturday</option>
+          <option value="sunday">Sunday</option>
+        </select>
+
+        <label for="event-info">Event Information:</label>
+        <textarea name="event-info" id="event-info" cols="30" rows="15">
+        </textarea>
+        <div class="row justify-space-evenly">
+          <button class="cancel-button">Cancel</button>
+          <button class="confirm-button">Confirm</button>
+        </div>
+      </div>
+    </dialog>
   </body>
 </html>

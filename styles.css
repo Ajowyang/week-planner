@@ -5,6 +5,7 @@
   border-radius: 5px;
   margin-top: 40px;
   margin-bottom: 10px;
+  padding: 10px;
 }
 
 .edit-button {
@@ -16,25 +17,30 @@
 }
 
 table {
-  border: 1px solid black;
+  border: 1px solid darkgrey;
   border-collapse: collapse;
   width: 75%;
 }
 
 th {
   font-weight: bold;
-  border: 1px solid black;
+  border: 1px solid darkgrey;
 }
 
-tr:nth-child(odd) {
+tr:nth-child(even) {
   background-color: lightgrey;
   color: black;
 }
 
-tr:nth-child(even) {
+tr:nth-child(odd) {
   background-color: white;
 }
 
 td {
-  border: 1px solid black;
+  border: 1px solid darkgrey;
+  height: 35px;
+}
+
+dialog {
+  display: block;
 }
