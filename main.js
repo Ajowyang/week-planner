@@ -25,6 +25,7 @@ $modalForm.addEventListener('submit', function (event) {
     event: $formElements.event.value,
   };
   console.log(dayPlan);
+  addStuff(dayPlan);
 });
 // Code for switching the table based on day of the week
 var $tableDay = document.querySelector('#chooseDay');
@@ -106,22 +107,126 @@ $tableDay.addEventListener('change', function () {
   }
 });
 // Code to render the the new html lines based off the code.
-// const $trList = document.querySelector('tr-list');
-// function renderTR(data: DayPlan): unknown{
-//   const $tdTime = document.createElement('td');
-//   $tdTime.setAttribute('class', 'time-table');
-//   $tdTime.textContent = data.time;
-//   const $tdEvent = document.createElement('td');
-//   $tdEvent.setAttribute('class', 'event-table');
-//   $tdEvent.textContent = data.event;
-//   const $tdButtonEdit = document.createElement('td');
-//   $tdButtonEdit.setAttribute('class', 'button-edit');
-//   const $tdButtonDel = document.createElement('td');
-//   $tdButtonDel.setAttribute('class', 'button-delete');
-//   const $buttonEdit = document.createElement('button');
-//   $buttonEdit.setAttribute('class', 'delete');
-//   $buttonEdit.setAttribute('type', 'submit');
-//   const $buttonDel = document.createElement('button');
-//   $buttonDel.setAttribute('class', 'delete');
-//   $buttonDel.setAttribute('type', 'submit');
-//
+function addStuff(object) {
+  var index = 1;
+  switch (object.day) {
+    case 'monday': {
+      var $tableRows = $monTable.querySelectorAll('tr');
+      console.log($tableRows);
+      for (var i = 1; i < $tableRows.length; i++) {
+        if (!$tableRows[i].classList.contains('filled')) {
+          index = i;
+          break;
+        }
+      }
+      var $tableData = $tableRows[index].querySelectorAll('td');
+      console.log($tableData);
+      $tableData[0].textContent = object.time;
+      $tableData[1].textContent = object.event;
+      $tableRows[index].classList.add('filled');
+      break;
+    }
+    case 'tuesday':
+      {
+        var $tableRows = $tueTable.querySelectorAll('tr');
+        console.log($tableRows);
+        for (var i = 1; i < $tableRows.length; i++) {
+          if (!$tableRows[i].classList.contains('filled')) {
+            index = i;
+            break;
+          }
+        }
+        var $tableData = $tableRows[index].querySelectorAll('td');
+        console.log($tableData);
+        $tableData[0].textContent = object.time;
+        $tableData[1].textContent = object.event;
+        $tableRows[index].classList.add('filled');
+      }
+      break;
+    case 'wednesday':
+      {
+        var $tableRows = $wedTable.querySelectorAll('tr');
+        console.log($tableRows);
+        for (var i = 1; i < $tableRows.length; i++) {
+          if (!$tableRows[i].classList.contains('filled')) {
+            index = i;
+            break;
+          }
+        }
+        var $tableData = $tableRows[index].querySelectorAll('td');
+        console.log($tableData);
+        $tableData[0].textContent = object.time;
+        $tableData[1].textContent = object.event;
+        $tableRows[index].classList.add('filled');
+      }
+      break;
+    case 'thursday':
+      {
+        var $tableRows = $thurTable.querySelectorAll('tr');
+        console.log($tableRows);
+        for (var i = 1; i < $tableRows.length; i++) {
+          if (!$tableRows[i].classList.contains('filled')) {
+            index = i;
+            break;
+          }
+        }
+        var $tableData = $tableRows[index].querySelectorAll('td');
+        console.log($tableData);
+        $tableData[0].textContent = object.time;
+        $tableData[1].textContent = object.event;
+        $tableRows[index].classList.add('filled');
+      }
+      break;
+    case 'friday':
+      {
+        var $tableRows = $friTable.querySelectorAll('tr');
+        console.log($tableRows);
+        for (var i = 1; i < $tableRows.length; i++) {
+          if (!$tableRows[i].classList.contains('filled')) {
+            index = i;
+            break;
+          }
+        }
+        var $tableData = $tableRows[index].querySelectorAll('td');
+        console.log($tableData);
+        $tableData[0].textContent = object.time;
+        $tableData[1].textContent = object.event;
+        $tableRows[index].classList.add('filled');
+      }
+      break;
+    case 'saturday':
+      {
+        var $tableRows = $satTable.querySelectorAll('tr');
+        console.log($tableRows);
+        for (var i = 1; i < $tableRows.length; i++) {
+          if (!$tableRows[i].classList.contains('filled')) {
+            index = i;
+            break;
+          }
+        }
+        var $tableData = $tableRows[index].querySelectorAll('td');
+        console.log($tableData);
+        $tableData[0].textContent = object.time;
+        $tableData[1].textContent = object.event;
+        $tableRows[index].classList.add('filled');
+      }
+      break;
+    case 'sunday':
+      {
+        var $tableRows = $sunTable.querySelectorAll('tr');
+        console.log($tableRows);
+        for (var i = 1; i < $tableRows.length; i++) {
+          if (!$tableRows[i].classList.contains('filled')) {
+            index = i;
+            break;
+          }
+        }
+        var $tableData = $tableRows[index].querySelectorAll('td');
+        console.log($tableData);
+        $tableData[0].textContent = object.time;
+        $tableData[1].textContent = object.event;
+        $tableRows[index].classList.add('filled');
+      }
+      break;
+  }
+}
