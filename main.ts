@@ -1,14 +1,8 @@
-// interface DayPlan {
-//   time: string;
-//   day: string;
-//   event: string;
-// }
-
-// const dayPlan: DayPlan = {
-//   time: '',
-//   day: '',
-//   event: '',
-// };
+interface DayPlan {
+  time: string;
+  day: string;
+  event: string;
+}
 
 // Code for the modal
 const $modal = document.querySelector('.event-modal') as HTMLDialogElement;
@@ -30,6 +24,28 @@ $newEventButton.addEventListener('click', function () {
 
 $dismissModal.addEventListener('click', function () {
   $modal.close();
+});
+
+const $confirmButton = document.querySelector('.confirm-button');
+if (!$confirmButton) throw new Error('.confirm-button query failed!');
+const $modalForm = document.querySelector('.modal-form') as HTMLFormElement;
+if (!$modalForm) throw new Error('.modal-form query failed!');
+
+interface FormElements extends HTMLCollection {
+  time: HTMLSelectElement;
+  day: HTMLSelectElement;
+  eventInfo: HTMLTextAreaElement;
+}
+
+$modalForm.addEventListener('submit', function () {
+  const $formElements = $modalForm.elements as FormElements;
+  const dayPlan: DayPlan = {
+    time: $formElements.time.value,
+    day: $formElements.day.value,
+    event: $formElements.eventInfo.value,
+  };
+
+  console.log(dayPlan);
 });
 
 // Code for switching the table based on day of the week
