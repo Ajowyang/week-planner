@@ -44,3 +44,15 @@ td {
 dialog {
   display: block;
 }
+
+label {
+  margin-top: 10px;
+}
+
+.cancel-button {
+  margin-top: 10px;
+}
+
+.confirm-button {
+  margin-top: 10px;
+}
